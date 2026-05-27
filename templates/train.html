@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Train Model · Author Switch Detector{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Train Model</h1>
+    <p class="subtitle">
+        Fit a classifier on the loaded dataset. The model learns to detect
+        author switches from differences in writing style between sentences.
+    </p>
+</div>
+
+<div class="two-col">
+
+    <div class="card">
+        <div class="card-label">Configuration</div>
+        <form method="POST" action="{{ url_for('train') }}">
+
+            <div class="form-group">
+                <label for="model_name">Classifier</label>
+                <select id="model_name" name="model_name">
+                    {% for m in models %}
+                    <option value="{{ m }}">{{ m.replace("_", " ").title() }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="n_splits">Cross-validation folds</label>
+                <input type="number" id="n_splits" name="n_splits" value="3" min="2" max="10">
+                <span class="hint">
+                    More folds = more reliable estimate, but slower.
+                    3 is a good starting point.
+                </span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                {{ "Retrain Model" if done else "Train Model" }}
+            </button>
+        </form>
+
+        <div class="card mt">
+            <div class="card-label">About Each Model</div>
+            <table class="info-table">
+                <tr>
+                    <th>Model</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td><code>logistic_regression</code></td>
+                    <td>Fast and interpretable. A good first choice.</td>
+                </tr>
+                <tr>
+                    <td><code>svm</code></td>
+                    <td>Strong on small datasets. Slower to train.</td>
+                </tr>
+                <tr>
+                    <td><code>knn</code></td>
+                    <td>Simple nearest-neighbour classifier.</td>
+                </tr>
+                <tr>
+                    <td><code>mlp</code></td>
+                    <td>Neural network. Usually the best accuracy.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-label">Training Log</div>
+        {% if log %}
+        <pre class="log">{% for line in log %}{{ line }}
+{% endfor %}</pre>
+        {% if done %}
+        <a href="{{ url_for('results') }}" class="btn btn-secondary mt">
+            View Results
+        </a>
+        {% endif %}
+        {% else %}
+        <p class="muted">The training log will appear here once you start training.</p>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}

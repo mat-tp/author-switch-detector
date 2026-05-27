@@ -1,0 +1,45 @@
+{
+    "name": "Author Switch Detector",
+
+    "image": "mcr.microsoft.com/devcontainers/python:3.12",
+
+    "remoteUser": "root",
+
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+
+    "runArgs": [
+        "--security-opt=label=disable"
+    ],
+
+    "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt",
+
+    "forwardPorts": [5000],
+
+    "remoteEnv": {
+        "DISPLAY": ""
+    },
+
+    "portsAttributes": {
+        "5000": {
+            "label": "Flask App",
+            "onAutoForward": "openBrowser"
+        }
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ],
+
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "editor.formatOnSave": true,
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    }
+}

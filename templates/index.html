@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Home · Author Switch Detector{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Author Switch Detector</h1>
+    <p class="subtitle">
+        Analyse writing style across sentences and detect when the author may have changed.
+        Paste any text to inspect it, or train a classifier on a labelled dataset.
+    </p>
+</div>
+
+<div class="card-grid">
+
+    <div class="card highlight-card">
+        <div class="card-label">Get Started</div>
+        <p class="card-desc">
+            Paste or upload a text file to break it into sentences,
+            view statistics, and explore each sentence's writing style.
+        </p>
+        <a href="{{ url_for('inspect') }}" class="btn btn-primary">Inspect Text →</a>
+    </div>
+
+    <div class="card">
+        <div class="card-label">Model Status</div>
+        {% if trained %}
+            <div class="status status-ok">● Model trained</div>
+            {% if metrics %}
+            <div class="metric-row"><span>F1 Score</span>   <strong>{{ "%.4f"|format(metrics.f1|float) }}</strong></div>
+            <div class="metric-row"><span>Precision</span>  <strong>{{ "%.4f"|format(metrics.precision|float) }}</strong></div>
+            <div class="metric-row"><span>Recall</span>     <strong>{{ "%.4f"|format(metrics.recall|float) }}</strong></div>
+            {% endif %}
+            <a href="{{ url_for('predict') }}" class="btn btn-secondary mt">Run Prediction →</a>
+        {% else %}
+            <div class="status status-warn">● Not trained yet</div>
+            <p class="muted small">Train a classifier on a labelled dataset to enable author-switch prediction.</p>
+            <a href="{{ url_for('train') }}" class="btn btn-secondary mt">Train Model →</a>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <div class="card-label">How It Works</div>
+        <ol class="steps">
+            <li><strong>Inspect</strong> — paste or upload text to explore its style</li>
+            <li><strong>Explore</strong> — view statistics over a labelled dataset</li>
+            <li><strong>Train</strong> — fit a classifier on sentence-pair features</li>
+            <li><strong>Predict</strong> — detect author switches in new text</li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="card mt">
+    <div class="card-label">Features Used</div>
+    <div class="feature-pill-list">
+        <span class="pill">Word count</span>
+        <span class="pill">Avg word length</span>
+        <span class="pill">Punctuation density</span>
+        <span class="pill">Function word ratio</span>
+        <span class="pill">Vocabulary richness (TTR)</span>
+        <span class="pill">Hapax ratio</span>
+        <span class="pill">Word length bins</span>
+        <span class="pill">Avg syllables</span>
+        <span class="pill">Long-word ratio</span>
+        <span class="pill">Digit & uppercase ratios</span>
+        <span class="pill">Sentence position</span>
+    </div>
+    <p class="muted small mt-sm">No external NLP libraries required — all features computed from raw text.</p>
+</div>
+{% endblock %}

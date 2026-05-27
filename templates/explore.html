@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}Explore Dataset · Author Switch Detector{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Explore Dataset</h1>
+    <p class="subtitle">
+        Statistics for each difficulty level in the training set.
+        Dataset root: <code>{{ dataset_root }}</code>
+    </p>
+</div>
+
+{% if errors %}
+<div class="alert alert-warning">
+    <strong>Some difficulties could not be loaded:</strong>
+    <ul>{% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+
+{% for diff, stat in stats.items() %}
+<section class="diff-section">
+    <h2 class="diff-title diff-{{ diff }}">{{ diff|upper }}</h2>
+
+    {% if stat %}
+    <div class="stat-grid">
+        <div class="stat-box">
+            <div class="stat-value">{{ stat.n_problems }}</div>
+            <div class="stat-key">Problems</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stat.n_sentences }}</div>
+            <div class="stat-key">Sentences</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stat.n_pairs }}</div>
+            <div class="stat-key">Pairs</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stat.n_switches }}</div>
+            <div class="stat-key">Switches</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stat.switch_rate }}%</div>
+            <div class="stat-key">Switch Rate</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stat.avg_sents_per_problem }}</div>
+            <div class="stat-key">Avg Sents / Problem</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stat.avg_words_per_sent }}</div>
+            <div class="stat-key">Avg Words / Sent</div>
+        </div>
+    </div>
+
+    {% if stat.examples %}
+    <div class="examples">
+        <div class="examples-columns">
+
+            <div class="examples-col">
+                <h3 class="examples-title switch-title"> Author Switch</h3>
+                {% if stat.examples.switch %}
+                {% for ex in stat.examples.switch %}
+                <div class="example-pair example-switch">
+                    <div class="pair-meta">Problem {{ ex.problem_id }} · Pair {{ ex.pair_index }}</div>
+                    <div class="pair-row">
+                        <span class="pair-label before">Before</span>
+                        <span class="pair-text">{{ ex.before }}</span>
+                    </div>
+                    <div class="pair-row">
+                        <span class="pair-label after">After</span>
+                        <span class="pair-text">{{ ex.after }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p class="muted small">No switch examples found.</p>
+                {% endif %}
+            </div>
+
+            <div class="examples-col">
+                <h3 class="examples-title same-title"> Same Author</h3>
+                {% if stat.examples.same_author %}
+                {% for ex in stat.examples.same_author %}
+                <div class="example-pair example-same">
+                    <div class="pair-meta">Problem {{ ex.problem_id }} · Pair {{ ex.pair_index }}</div>
+                    <div class="pair-row">
+                        <span class="pair-label before">Before</span>
+                        <span class="pair-text">{{ ex.before }}</span>
+                    </div>
+                    <div class="pair-row">
+                        <span class="pair-label after">After</span>
+                        <span class="pair-text">{{ ex.after }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p class="muted small">No same-author examples found.</p>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+    {% endif %}
+
+    {% else %}
+    <p class="muted">No data found for <strong>{{ diff }}</strong>. Check that the dataset folder exists.</p>
+    {% endif %}
+</section>
+{% endfor %}
+{% endblock %}

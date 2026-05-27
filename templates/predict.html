@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Predict · Author Switch Detector{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Predict Author Switches</h1>
+    <p class="subtitle">
+        Paste text or upload a <code>.txt</code> file.
+        The model will label each consecutive sentence pair
+        as <em>same author</em> or <em>author switch</em>.
+    </p>
+</div>
+
+{% if not trained %}
+<div class="random-banner">
+    <!-- <div class="random-banner-icon">random prediction will be used</div> -->
+    <div>
+        <strong>No trained model found — running in random mode.</strong>
+        <span>
+            Each pair is assigned a random probability. This is a useful baseline:
+            any trained model should do better than this.
+            <a href="{{ url_for('train') }}">Train a model →</a>
+        </span>
+    </div>
+</div>
+{% endif %}
+
+<div class="two-col">
+
+    {# ── Input ── #}
+    <div class="card">
+        <div class="card-label">Input</div>
+        <form method="POST" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="text">Paste text <span class="muted">(one sentence per line)</span></label>
+                <textarea id="text" name="text" rows="10"
+                    placeholder="Paste sentences here, one per line...">{{ input_text or '' }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="file">Or upload a .txt file</label>
+                <label class="file-drop" for="file">
+                    <span class="file-icon">↑</span>
+                    <span id="file-label">Choose file</span>
+                    <input type="file" id="file" name="file" accept=".txt"
+                        onchange="document.getElementById('file-label').textContent = this.files[0]?.name || 'Choose file'">
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="threshold">
+                    Decision threshold:
+                    <span id="thresh-display">0.50</span>
+                </label>
+                <input type="range" id="threshold" name="threshold" min="0.1" max="0.9" step="0.05" value="0.5" oninput="document.getElementById('thresh-display').textContent =
+                             parseFloat(this.value).toFixed(2)">
+                <span class="hint">
+                    Lower → more switches flagged &nbsp;·&nbsp; Higher → fewer
+                </span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Run Detection</button>
+            <a href="{{ url_for('inspect') }}" class="btn btn-secondary">Inspect First →</a>
+        </form>
+    </div>
+
+    {# ── Results ── #}
+    <div class="card">
+        <div class="card-label">Results</div>
+
+        {% if result %}
+
+        <div class="summary-row">
+            <span class="muted">{{ result.n_sentences }} sentences · {{ result.n_pairs }} pairs</span>
+            <div style="display:flex; align-items:center; gap:8px;">
+                {% if result.mode == "random" %}
+                <span class="mode-tag mode-random"> Random</span>
+                {% else %}
+                <span class="mode-tag mode-model"> Model</span>
+                {% endif %}
+                <span class="badge {% if result.n_switches > 0 %}badge-warn{% else %}badge-ok{% endif %}">
+                    {{ result.n_switches }} switch{{ "es" if result.n_switches != 1 else "" }} detected
+                </span>
+            </div>
+        </div>
+
+        <div class="prediction-list">
+            {% for pair in result.pairs %}
+            <div class="prediction-item {{ 'is-switch' if pair.switch else '' }}">
+
+                <div class="pred-header">
+                    <span class="pair-num">Pair {{ pair.index + 1 }}</span>
+                    {% if pair.switch %}
+                    <span class="badge badge-warn"> Switch</span>
+                    {% else %}
+                    <span class="badge badge-ok"> Same</span>
+                    {% endif %}
+                    {% if pair.probability is not none %}
+                    <span class="prob">p = {{ pair.probability }}</span>
+                    {% endif %}
+                </div>
+
+                <div class="pred-sent before-sent">{{ pair.sentence_a }}</div>
+                <div class="pred-divider">↓</div>
+                <div class="pred-sent after-sent">{{ pair.sentence_b }}</div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        {% else %}
+        <p class="muted">Results will appear here once you submit text.</p>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}

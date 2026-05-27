@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block title %}Inspect Text · Author Switch Detector{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Inspect Text</h1>
+    <p class="subtitle">
+        Paste text or upload a <code>.txt</code> file. Each line is treated as one sentence.
+        You'll see overall statistics and a breakdown of each sentence's writing style.
+    </p>
+</div>
+
+{# ── Input form ── #}
+<div class="card">
+    <div class="card-label">Input</div>
+    <form method="POST" action="{{ url_for('inspect') }}" enctype="multipart/form-data">
+
+        <div class="form-row">
+            <div class="form-group grow">
+                <label for="text">Paste text <span class="muted">(one sentence per line)</span></label>
+                <textarea id="text" name="text" rows="7"
+                    placeholder="Paste your text here — one sentence per line...">{{ input_text or '' }}</textarea>
+            </div>
+
+            <div class="form-group upload-col">
+                <label for="file">Or upload a .txt file</label>
+                <label class="file-drop" for="file">
+                    <span class="file-icon">↑</span>
+                    <span id="file-label">Choose file</span>
+                    <input type="file" id="file" name="file" accept=".txt"
+                        onchange="document.getElementById('file-label').textContent = this.files[0]?.name || 'Choose file'">
+                </label>
+                <span class="hint">Max 2 MB · plain text only</span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Inspect →</button>
+
+        {% if stats %}
+        <a href="{{ url_for('predict') }}?text={{ input_text|urlencode if input_text }}" class="btn btn-secondary"
+            style="margin-left:8px">Run Prediction →</a>
+        {% endif %}
+    </form>
+</div>
+
+{% if stats %}
+
+{# ── Overall stats ── #}
+<section class="mt">
+    <h2 class="section-title">Text Overview</h2>
+    <div class="stat-grid-7">
+        <div class="stat-box">
+            <div class="stat-value">{{ stats.n_sentences }}</div>
+            <div class="stat-key">Sentences</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stats.n_words }}</div>
+            <div class="stat-key">Total Words</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stats.unique_words }}</div>
+            <div class="stat-key">Unique Words</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stats.vocabulary_richness }}%</div>
+            <div class="stat-key">Vocab Richness</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stats.avg_words_per_sent }}</div>
+            <div class="stat-key">Avg Words/Sent</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stats.shortest_sent }}</div>
+            <div class="stat-key">Shortest Sent</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value">{{ stats.longest_sent }}</div>
+            <div class="stat-key">Longest Sent</div>
+        </div>
+    </div>
+</section>
+
+{# ── Sentence breakdown ── #}
+<section class="mt">
+    <h2 class="section-title">
+        Sentence Breakdown
+        <span class="section-sub">— style distance shows how different each sentence is from the next</span>
+    </h2>
+
+    {% if truncated %}
+    <div class="alert alert-warning" style="margin-bottom:12px">
+        Showing first 60 sentences. The full text has {{ stats.n_sentences }} sentences.
+    </div>
+    {% endif %}
+
+    <div class="sentence-list">
+        {% for d in details %}
+        <div
+            class="sentence-card {% if d.style_distance and d.style_distance > 60 %}high-dist{% elif d.style_distance and d.style_distance > 30 %}mid-dist{% endif %}">
+
+            <div class="sent-header">
+                <span class="sent-num">#{{ d.index }}</span>
+                <span class="sent-words">{{ d.words }} words</span>
+
+                {% if d.style_distance is not none %}
+                <div class="dist-wrap" title="Style distance to next sentence">
+                    <span class="dist-label">Distance to next</span>
+                    <div class="dist-bar-track">
+                        <div class="dist-bar
+                            {% if d.style_distance > 60 %}dist-high
+                            {% elif d.style_distance > 30 %}dist-mid
+                            {% else %}dist-low{% endif %}" style="width: {{ d.style_distance }}%"></div>
+                    </div>
+                    <span class="dist-val">{{ d.style_distance }}%</span>
+                </div>
+                {% else %}
+                <span class="sent-last">last sentence</span>
+                {% endif %}
+            </div>
+
+            <div class="sent-text">{{ d.text }}</div>
+
+            <div class="sent-features">
+                <span class="feat-chip" title="Average word length">
+                    <span class="chip-key">avg word</span>
+                    <span class="chip-val">{{ d.avg_word_len }} ch</span>
+                </span>
+                <span class="feat-chip" title="Punctuation marks per word">
+                    <span class="chip-key">punct</span>
+                    <span class="chip-val">{{ d.punct_density }}</span>
+                </span>
+                <span class="feat-chip" title="Fraction of function words (the, and, of…)">
+                    <span class="chip-key">func words</span>
+                    <span class="chip-val">{{ (d.fw_ratio * 100)|round|int }}%</span>
+                </span>
+                <span class="feat-chip" title="Type-token ratio: unique words ÷ total words">
+                    <span class="chip-key">vocab TTR</span>
+                    <span class="chip-val">{{ (d.ttr * 100)|round|int }}%</span>
+                </span>
+                <span class="feat-chip" title="Average syllables per word">
+                    <span class="chip-key">syllables</span>
+                    <span class="chip-val">{{ d.avg_syllables }}</span>
+                </span>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endif %}
+{% endblock %}

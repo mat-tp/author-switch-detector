@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}Results · Author Switch Detector{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Evaluation Results</h1>
+    <p class="subtitle">
+        Metrics from the most recent training run, evaluated on a held-out fold.
+    </p>
+</div>
+
+{% if metrics %}
+<div class="card-grid three-col">
+    <div class="metric-card">
+        <div class="big-metric">{{ "%.4f"|format(metrics.f1|float) }}</div>
+        <div class="metric-label">F1 Score</div>
+        <div class="metric-hint">Balance of precision and recall</div>
+    </div>
+    <div class="metric-card">
+        <div class="big-metric">{{ "%.4f"|format(metrics.precision|float) }}</div>
+        <div class="metric-label">Precision</div>
+        <div class="metric-hint">Of predicted switches, how many were correct</div>
+    </div>
+    <div class="metric-card">
+        <div class="big-metric">{{ "%.4f"|format(metrics.recall|float) }}</div>
+        <div class="metric-label">Recall</div>
+        <div class="metric-hint">Of true switches, how many were found</div>
+    </div>
+</div>
+{% endif %}
+
+{% if cv %}
+<div class="card mt">
+    <div class="card-label">Cross-Validation</div>
+    <table class="info-table">
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Test F1 (mean)</td>
+            <td><strong>{{ "%.4f"|format(cv.test_f1_mean|float) }}</strong></td>
+        </tr>
+        <tr>
+            <td>Test F1 (std dev)</td>
+            <td>{{ "%.4f"|format(cv.test_f1_std|float) }}</td>
+        </tr>
+        <tr>
+            <td>Train F1 (mean)</td>
+            <td>{{ "%.4f"|format(cv.train_f1_mean|float) }}</td>
+        </tr>
+        <tr>
+            <td>Train F1 (std dev)</td>
+            <td>{{ "%.4f"|format(cv.train_f1_std|float) }}</td>
+        </tr>
+    </table>
+    <p class="muted small mt-sm">
+        A large gap between train and test F1 suggests overfitting.
+        Try a simpler model or more training data.
+    </p>
+</div>
+{% endif %}
+
+{% if not metrics and not cv %}
+<div class="card">
+    <p class="muted">
+        No results yet. <a href="{{ url_for('train') }}">Train a model</a> first.
+    </p>
+</div>
+{% endif %}
+
+<div class="card mt">
+    <div class="card-label">What the Features Capture</div>
+    <table class="info-table">
+        <tr><th>Feature group</th><th>Examples</th><th>Why it helps</th></tr>
+        <tr>
+            <td>Basic counts</td>
+            <td>word count, char count, punctuation</td>
+            <td>Authors differ in sentence length and punctuation habits</td>
+        </tr>
+        <tr>
+            <td>Function words</td>
+            <td>the, and, of, that…</td>
+            <td>Subconscious usage patterns are hard to imitate</td>
+        </tr>
+        <tr>
+            <td>Vocabulary richness</td>
+            <td>TTR, hapax ratio</td>
+            <td>Different authors reuse words at different rates</td>
+        </tr>
+        <tr>
+            <td>Word length distribution</td>
+            <td>short / medium / long bins</td>
+            <td>Technical vs casual authors use different word lengths</td>
+        </tr>
+        <tr>
+            <td>Readability</td>
+            <td>avg syllables, long-word ratio</td>
+            <td>Reflects vocabulary complexity and writing register</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

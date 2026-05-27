@@ -1,0 +1,8 @@
+# Ignore the data directory
+mawsa26-pan-zenodo-DATA/
+
+# Ignore cache and temporary files
+__pycache__/
+
+*/__pycache__/
+
