@@ -1,6 +1,4 @@
-""" Simple stylometric features.
-If you want fewer features, simply comment out the groups you don't need
-inside extract() and remove the corresponding names from FEATURE_NAMES.
+""" Stylometric features.
 """
 
 import re
@@ -36,7 +34,7 @@ _TOP_200 = [
     "others", "level", "office", "door", "health", "person", "art", "war", "history", "party",
     "result", "change", "morning", "reason", "research", "girl", "guy", "moment", "air", "teacher",
 ]
-# change the slice if you want more/less words
+
 _FUNCTION_WORDS = frozenset(_TOP_200)
 
 FEATURE_NAMES = [
@@ -161,3 +159,10 @@ class FeatureExtractor:
             [extract(s, i, n) for i, s in enumerate(sentences)],
             axis=0,
         )
+
+if __name__ == "__main__":
+    # usage example
+    sentence = "This is an example sentence, with punctuation!"
+    features = extract(sentence, position=0, n_total=1)
+    print("Features:", features)
+    

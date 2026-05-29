@@ -122,3 +122,12 @@ def dataset_stats(problems):
         "avg_sents_per_problem": round(n_sents / n_probs, 1),
         "avg_words_per_sent": avg_words,
     }
+
+if __name__ == "__main__":
+    # usage example: load the training data and print stats for each difficulty level
+    root_dir = "mawsa26-pan-zenodo-DATA"
+    data = load_all(root_dir, difficulties=["easy", "medium", "hard"], splits=["train"])
+
+    for key, problems in data.items():
+        stats = dataset_stats(problems)
+        print(f"{key}: {stats}")
