@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.27)  29 MAY 2026 10:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.27)  29 MAY 2026 11:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1284,451 +1284,820 @@ Package biblatex Info: ... file 'presentation.bbl' found.
 Package biblatex Info: Reference section=0 on input line 38.
 Package biblatex Info: Reference segment=0 on input line 38.
  (./presentation.nav)
-<ujlogo.pdf, id=115, 426.59375pt x 426.59375pt>
+Overfull \hbox (92.7529pt too wide) detected at line 38
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+
+Overfull \hbox (92.7529pt too wide) detected at line 43
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+<ujlogo.pdf, id=141, 426.59375pt x 426.59375pt>
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
 Package pdftex.def Info: ujlogo.pdf  used on input line 43.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf
--dist/fonts/enc/dvips/lm/lm-rm.enc}
 
- <./ujlogo.pdf>] (./presentation.toc)
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/lm/lm-rm.enc}
+
+ <./ujlogo.pdf>]
+Overfull \hbox (92.7529pt too wide) detected at line 49
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+(./presentation.toc
+Overfull \hbox (0.50014pt too wide) detected at line 10
+ []\OT1/lmss/m/n/8 10 
+ []
+
+)
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
 Package pdftex.def Info: ujlogo.pdf  used on input line 49.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [2
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[2
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 60
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 60.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[3
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 76
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 76.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[4
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 98
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 98.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[5
 
 ]
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 65.
+Package pdftex.def Info: ujlogo.pdf  used on input line 98.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [3
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[6
 
 ]
-File: ujlogo.pdf Graphic file (type pdf)
-<use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 87.
-(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [4
+Overfull \hbox (92.7529pt too wide) detected at line 129
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
 
-]
-File: ujlogo.pdf Graphic file (type pdf)
-<use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 87.
-(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [5
-
-]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-18.
-
+29.
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-118.
+129.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-118.
+129.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 118.
+(Font)              <10.95> on input line 129.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 118.
+(Font)              <8> on input line 129.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 118.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 118
+(Font)              <6> on input line 129.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 129
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 118
+LaTeX Font Info:    Trying to load font information for U+msb on input line 129
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 118.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 129.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 118.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 129.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 118.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 129.
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 118.
+Package pdftex.def Info: ujlogo.pdf  used on input line 129.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [6
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[7
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+Overfull \hbox (92.7529pt too wide) detected at line 146
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 135.
+Package pdftex.def Info: ujlogo.pdf  used on input line 146.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [7
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[8
 
 ]
-<img/conceptual_class.pdf.png, id=651, 573.14125pt x 422.57875pt>
+Overfull \hbox (92.7529pt too wide) detected at line 155
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+<img/conceptual_class.pdf.png, id=893, 573.14125pt x 422.57875pt>
 File: img/conceptual_class.pdf.png Graphic file (type png)
 <use img/conceptual_class.pdf.png>
-Package pdftex.def Info: img/conceptual_class.pdf.png  used on input line 144.
+Package pdftex.def Info: img/conceptual_class.pdf.png  used on input line 155.
 (pdftex.def)             Requested size: 177.36586pt x 130.77237pt.
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 144.
+Package pdftex.def Info: ujlogo.pdf  used on input line 155.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [8
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[9
 
  <./img/conceptual_class.pdf.png>]
+Overfull \hbox (92.7529pt too wide) detected at line 174
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 163.
+(Font)              <9> on input line 174.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 163.
+(Font)              <5> on input line 174.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 163.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 174.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 163.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 174.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
 []|\OT1/lmss/m/n/9 UC3: In-ter-pret
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
 []|\OT1/lmss/m/n/9 UC5: Com-pare
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
 \OT1/lmss/m/n/9 model per-for-
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 163.
+Package pdftex.def Info: ujlogo.pdf  used on input line 174.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
-[9
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[10
 
 ]
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-181.
- (/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-File: ujlogo.pdf Graphic file (type pdf)
-<use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 181.
-(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [10
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 206.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 206.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 206.
-
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 206.
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
- []
-
-
-Overfull \hbox (2.49701pt too wide) in paragraph at lines 206--206
-[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+Overfull \hbox (92.7529pt too wide) detected at line 193
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 206.
+Package pdftex.def Info: ujlogo.pdf  used on input line 193.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
 [11
 
 ]
-<img/proto_home.png, id=937, 1230.5975pt x 988.69376pt>
-File: img/proto_home.png Graphic file (type png)
-<use img/proto_home.png>
-Package pdftex.def Info: img/proto_home.png  used on input line 216.
-(pdftex.def)             Requested size: 179.25114pt x 144.01317pt.
-<img/proto_inspect.png, id=938, 1230.5975pt x 988.69376pt>
-File: img/proto_inspect.png Graphic file (type png)
-<use img/proto_inspect.png>
-Package pdftex.def Info: img/proto_inspect.png  used on input line 216.
-(pdftex.def)             Requested size: 179.25114pt x 144.01317pt.
-File: ujlogo.pdf Graphic file (type pdf)
-<use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 216.
-(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [12
-
- <./img/proto_home.png> <./img/proto_inspect.png>]
-<img/proto_predict.png, id=1011, 1230.5975pt x 988.69376pt>
-File: img/proto_predict.png Graphic file (type png)
-<use img/proto_predict.png>
-Package pdftex.def Info: img/proto_predict.png  used on input line 224.
-(pdftex.def)             Requested size: 278.83578pt x 224.01547pt.
-
-Overfull \vbox (58.22112pt too high) detected at line 224
+Overfull \hbox (92.7529pt too wide) detected at line 210
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 224.
+Package pdftex.def Info: ujlogo.pdf  used on input line 210.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[12
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 226
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 226.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
 [13
 
- <./img/proto_predict.png>]
-Overfull \vbox (27.94334pt too high) detected at line 248
+]
+Overfull \hbox (92.7529pt too wide) detected at line 244
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 248.
+Package pdftex.def Info: ujlogo.pdf  used on input line 244.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
 [14
 
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-Overfull \vbox (27.94334pt too high) detected at line 248
+]
+Overfull \hbox (92.7529pt too wide) detected at line 266
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 248.
+Package pdftex.def Info: ujlogo.pdf  used on input line 266.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
 [15
 
 ]
-File: ujlogo.pdf Graphic file (type pdf)
-<use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 265.
-(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [16
+Overfull \hbox (92.7529pt too wide) detected at line 286
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
 
-]
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
 Package pdftex.def Info: ujlogo.pdf  used on input line 286.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [17
 
-]
-Underfull \hbox (badness 1082) in paragraph at lines 307--307
-[]|\OT1/lmss/m/n/9 Authentication, doc-u-ment pro-cess-
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
  []
 
+[16
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--307
-[]|\OT1/lmss/m/n/9 Integration
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+Overfull \hbox (92.7529pt too wide) detected at line 328
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
  []
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 328.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 328.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 328.
 
-Underfull \hbox (badness 3557) in paragraph at lines 307--307
-[]|\OT1/lmss/m/n/9 Inspect, Pre-dict, Train, Ex-plore,
- []
-
-
-Underfull \hbox (badness 1009) in paragraph at lines 307--307
-\OT1/lmss/m/n/9 Com-pare end-points via Flask test
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--307
-[]|\OT1/lmss/m/n/9 End[]to[]end: two switches,
- []
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 328.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--307
-\OT1/lmss/m/n/9 single[]author, 50[]sentence per-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--307
-[]|\OT1/lmss/m/n/9 Proxy user per-forms
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--307
-\OT1/lmss/m/n/9 upload[]analyse[]review; us-abil-ity
- []
-
-
-Overfull \vbox (0.2692pt too high) detected at line 307
+Overfull \vbox (6.60736pt too high) detected at line 328
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 307.
+Package pdftex.def Info: ujlogo.pdf  used on input line 328.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[17
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 358
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+
+Overfull \vbox (10.66972pt too high) detected at line 358
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 358.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
 [18
 
 ]
+Overfull \hbox (92.7529pt too wide) detected at line 376
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
+376.
+(/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 327.
+Package pdftex.def Info: ujlogo.pdf  used on input line 376.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [19
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[19
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
+Overfull \hbox (92.7529pt too wide) detected at line 401
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+
+Overfull \hbox (2.49701pt too wide) in paragraph at lines 401--401
+[]|[]\OT1/lmss/bx/n/10 Implemented[]| 
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 401.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[20
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 342--342
+Overfull \hbox (92.7529pt too wide) detected at line 413
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 413.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[21
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 437
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+
+Overfull \vbox (27.94334pt too high) detected at line 437
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 437.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[22
+
+]
+Overfull \vbox (27.94334pt too high) detected at line 437
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 437.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[23
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 454
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 454.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[24
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 475
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 475.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[25
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 495
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 495.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[26
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 510
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--510
 []|\OT1/lmss/m/n/9 Time con-straints limit
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 342.
+Package pdftex.def Info: ujlogo.pdf  used on input line 510.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
-[20
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[27
 
 ]
-File: ujlogo.pdf Graphic file (type pdf)
-<use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 357.
-(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [21
-
-]
-File: ujlogo.pdf Graphic file (type pdf)
-<use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 368.
-(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [22
-
-]
-Overfull \vbox (40.59164pt too high) detected at line 388
+Overfull \hbox (92.7529pt too wide) detected at line 525
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 388.
+Package pdftex.def Info: ujlogo.pdf  used on input line 525.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
-[23
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[28
 
 ]
-Overfull \vbox (6.05031pt too high) detected at line 409
+Overfull \hbox (92.7529pt too wide) detected at line 536
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 409.
+Package pdftex.def Info: ujlogo.pdf  used on input line 536.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
-[24
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[29
 
 ]
-Overfull \vbox (6.05031pt too high) detected at line 409
+Overfull \hbox (92.7529pt too wide) detected at line 556
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+
+Overfull \vbox (40.59164pt too high) detected at line 556
  []
 
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 409.
+Package pdftex.def Info: ujlogo.pdf  used on input line 556.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
-[25
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[30
 
 ]
+Overfull \hbox (92.7529pt too wide) detected at line 577
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+
+Overfull \vbox (6.05031pt too high) detected at line 577
+ []
+
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 426.
+Package pdftex.def Info: ujlogo.pdf  used on input line 577.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [26
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[31
 
 ]
+Overfull \vbox (6.05031pt too high) detected at line 577
+ []
+
 File: ujlogo.pdf Graphic file (type pdf)
 <use ujlogo.pdf>
-Package pdftex.def Info: ujlogo.pdf  used on input line 439.
+Package pdftex.def Info: ujlogo.pdf  used on input line 577.
 (pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
- [27
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[32
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 594
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 594.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[33
+
+]
+Overfull \hbox (92.7529pt too wide) detected at line 607
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+File: ujlogo.pdf Graphic file (type pdf)
+<use ujlogo.pdf>
+Package pdftex.def Info: ujlogo.pdf  used on input line 607.
+(pdftex.def)             Requested size: 42.67488pt x 42.67912pt.
+
+Overfull \hbox (92.7529pt too wide) has occurred while \output is active
+  [] [][] [][] [][] [][] [][][][][] [][][][][][][][][] [][][][] [][][][][][][][
+][] [][] [][] [][]  
+ []
+
+[34
 
 ]
 \tf@nav=\write7
@@ -1746,32 +2115,34 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 77C95C37E4AD1799EB83AFCAC365E76F;956.
+(rerunfilecheck)             Checksum: 5F923056EDB2A7727D45247D2CBCEE3D;1354.
 Package logreq Info: Writing requests to 'presentation.run.xml'.
 \openout1 = `presentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30886 strings out of 467363
- 599657 string characters out of 5419001
- 1432210 words of memory out of 6000000
- 59317 multiletter control sequences out of 15000+600000
+ 30907 strings out of 467363
+ 599527 string characters out of 5419001
+ 1437208 words of memory out of 6000000
+ 59322 multiletter control sequences out of 15000+600000
  694082 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,123p,1189b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/lm/lmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/lm/lmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/lm/lmsso8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/l
-mtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on presentation.pdf (27 pages, 1101685 bytes).
+exlive/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/lm/lmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/lm/lmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss17
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/lm/lmsso8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lm
+sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/lm/lmtt9.pfb>
+Output written on presentation.pdf (34 pages, 996109 bytes).
 PDF statistics:
- 2050 PDF objects out of 2073 (max. 8388607)
- 1120 compressed objects within 12 object streams
- 66 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3166 PDF objects out of 3580 (max. 8388607)
+ 1706 compressed objects within 18 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 147 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -28,7 +28,7 @@
 % ---- Presentation metadata ----
 \title[PDR \& Prototype]{Preliminary Design Review \& Prototype}
 \subtitle{Multi-Author Writing Style Change Detection}
-\author[T.P.A.N. Matlala]{Tshephang Phuti-A-Nkutu Matlala\\[0.5em]}
+\author[T.P. Matlala]{Tshephang Phuti-A-Nkutu Matlala\\[0.5em]}
 \institute[Academy of Computer Science and Software Engineering]{
     Academy of Computer Science and Software Engineering\\
     University of Johannesburg\\ South Africa}
@@ -46,6 +46,17 @@
 \section*{Outline}
 \begin{frame}{Outline}
     \tableofcontents
+\end{frame}
+
+% ======================== PRELIMINARY CONTEXT ========================
+\section{About this Preliminary Design Review}
+\begin{frame}{Preliminary Design Review Context}
+    \begin{itemize}
+        \item A Preliminary Design Review (PDR) examines the system’s design before detailed implementation begins.
+        \item The design artefacts, test plan, and prototype presented here are \textbf{preliminary} – they will be refined as the project evolves.
+        \item Test cases in this review are initial versions; they will be expanded, adapted, and re-prioritised during the development cycle.
+        \item The prototype validates the core pipeline and interaction concepts, not the final feature set or performance.
+    \end{itemize}
 \end{frame}
 
 % ======================== INTRODUCTION ========================
@@ -162,6 +173,190 @@
     \end{tabular}
 \end{frame}
 
+% ======================== PRELIMINARY TEST CASES (FULL) ========================
+\section{Preliminary Test Cases}
+
+\begin{frame}{Unit Test Cases – Authentication (UT-01 to UT-05)}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{p{1.2cm} X X}
+\toprule
+\textbf{ID} & \textbf{Description} & \textbf{Expected Result}\\
+\midrule
+UT-01 & Username validation – valid & Username accepted\\
+UT-02 & Username validation – invalid & Error message displayed\\
+UT-03 & Password validation – correct & Login successful\\
+UT-04 & Password validation – incorrect & Login rejected\\
+UT-05 & Empty login fields & Validation error displayed\\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Unit Test Cases – Document Processing (UT-06 to UT-11)}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{p{1.2cm} X X}
+\toprule
+\textbf{ID} & \textbf{Description} & \textbf{Expected Result}\\
+\midrule
+UT-06 & Empty document upload & Upload rejected with warning\\
+UT-07 & Valid text upload & Document processed successfully\\
+UT-08 & Unsupported file format & Upload rejected with error message\\
+UT-09 & Oversized document & Upload blocked\\
+UT-10 & Sentence segmentation & Sentences split correctly\\
+UT-11 & Single-sentence submission & Warning displayed\\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Unit Test Cases – Feature Extraction (UT-12 to UT-16)}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{p{1.2cm} X X}
+\toprule
+\textbf{ID} & \textbf{Description} & \textbf{Expected Result}\\
+\midrule
+UT-12 & Word count extraction & Count calculated correctly\\
+UT-13 & Punctuation density & Density calculated correctly\\
+UT-14 & Function-word ratio & Ratio computed correctly\\
+UT-15 & Type-token ratio & Correct lexical richness value\\
+UT-16 & Feature vector generation & Vector generated successfully\\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Unit Test Cases – Prediction, Training \& Evaluation (UT-17 to UT-23)}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{p{1.2cm} X X}
+\toprule
+\textbf{ID} & \textbf{Description} & \textbf{Expected Result}\\
+\midrule
+UT-17 & Prediction without model & Informative warning displayed\\
+UT-18 & Prediction with trained model & Predictions generated successfully\\
+UT-19 & Confidence-score generation & Confidence score displayed\\
+UT-20 & Author-switch detection & Switch positions identified\\
+UT-21 & Model training execution & Training completes successfully\\
+UT-22 & Evaluation metrics & Precision, recall, F1 displayed\\
+UT-23 & Model comparison & Comparison table displayed correctly\\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Integration Test Cases (IT-01 to IT-11)}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{p{1.2cm} X X}
+\toprule
+\textbf{ID} & \textbf{Description} & \textbf{Expected Result}\\
+\midrule
+IT-01 & Inspect endpoint – valid text & HTTP 200; sentence cards displayed\\
+IT-02 & Inspect endpoint – file upload & HTTP 200; content parsed correctly\\
+IT-03 & Inspect endpoint – empty body & Flash warning displayed\\
+IT-04 & Predict endpoint – no model & Message: ``No model available''\\
+IT-05 & Predict endpoint – with model & HTTP 200; predictions shown\\
+IT-06 & Predict endpoint – fewer than 2 sentences & Flash warning displayed\\
+IT-07 & Train endpoint – dataset missing & Flash error; log shows dataset error\\
+IT-08 & Train endpoint – full pipeline & model.pkl created on disk\\
+IT-09 & Explore endpoint – statistics & Statistics correct per difficulty level\\
+IT-10 & Explore endpoint – both example types & Both columns displayed correctly\\
+IT-11 & Model comparison endpoint & Side-by-side metrics displayed\\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{System Test Cases \& UAT}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{p{1.2cm} X X}
+\toprule
+\textbf{ID} & \textbf{Description} & \textbf{Expected Result}\\
+\midrule
+ST-01 & End-to-end – two known switches & Both switches detected; top-3 features shown\\
+ST-02 & End-to-end – single-author & Zero switches detected\\
+ST-03 & Performance – 50 sentences & Processing completes in <10 seconds\\
+ST-04 & End-to-end – train then predict & Model mode used; F1 displayed\\
+\midrule
+UAT & Proxy user workflow & Usability rating $\ge 4/5$\\
+\bottomrule
+\end{tabularx}
+\vspace{0.3cm}
+\raggedright\tiny
+These preliminary test cases are subject to revision as the system evolves. All 38 entries are documented in the PDR document.
+\end{frame}
+
+% ======================== VALIDATION STRATEGY ========================
+
+\begin{frame}{Validation Strategy}
+\begin{center}
+\textbf{Testing Pyramid}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+    \item \textbf{Unit Testing}
+    \begin{itemize}
+        \item Validates feature extraction and document processing modules independently.
+        \item Target coverage: $\geq 80\%$
+    \end{itemize}
+    
+    \vspace{0.2cm}
+    
+    \item \textbf{Integration Testing}
+    \begin{itemize}
+        \item Verifies Flask routes and workflow interactions.
+        \item Uses Flask test client for deterministic testing.
+    \end{itemize}
+    
+    \vspace{0.2cm}
+    
+    \item \textbf{System Testing}
+    \begin{itemize}
+        \item Evaluates complete end-to-end user scenarios.
+        \item Includes performance and prediction validation.
+    \end{itemize}
+    
+    \vspace{0.2cm}
+    
+    \item \textbf{User Acceptance Testing}
+    \begin{itemize}
+        \item Proxy user performs upload-analyse-review workflow.
+        \item Measures usability and interaction clarity.
+    \end{itemize}
+\end{enumerate}
+\end{frame}
+
+% ======================== KEY SYSTEM SCENARIOS ========================
+
+\begin{frame}{Key System Scenarios}
+\begin{block}{Scenario 1: Multi-Author Detection}
+\begin{itemize}
+\item User uploads a document containing multiple writing styles.
+\item System extracts stylometric features between sentence pairs.
+\item Classifier predicts author-switch positions with confidence scores.
+\end{itemize}
+\end{block}
+
+\vspace{0.2cm}
+
+\begin{block}{Scenario 2: Single-Author Validation}
+    \begin{itemize}
+        \item Document contains consistent writing style throughout.
+        \item Expected result: zero author switches detected.
+    \end{itemize}
+\end{block}
+
+\vspace{0.2cm}
+
+\begin{block}{Scenario 3: Performance Requirement}
+    \begin{itemize}
+        \item 50-sentence document processed within interactive time.
+        \item Acceptance target: under 10 seconds on reference hardware.
+    \end{itemize}
+\end{block}
+\end{frame}
+
 % ======================== PROTOTYPE ========================
 \section{Prototype}
 \begin{frame}{Prototype Overview}
@@ -205,22 +400,16 @@
     \textbf{Partial} items are implemented with limited functionality in the prototype and will be fully realised in the final system.
 \end{frame}
 
-\begin{frame}{Prototype Screens – Home \& Inspect}
-    \begin{center}
-        \includegraphics[width=0.45\textwidth,valign=t]{img/proto_home.png}\hfill
-        \includegraphics[width=0.45\textwidth,valign=t]{img/proto_inspect.png}
-    \end{center}
+\begin{frame}{Live Demo}
+    \centering
+    \Large
+    Prototype Walkthrough\\
+    \bigskip
+    \normalsize
+    The prototype will be demonstrated live, covering the Inspect, Train, and Predict workflows.\\
+    \vspace{0.5cm}
     \footnotesize
-    \textbf{Left}: Home page – model status and stylometric feature groups.\\
-    \textbf{Right}: Inspect page – per‑sentence features and colour‑coded style‑distance bars (red = high stylistic distance).
-\end{frame}
-
-\begin{frame}{Prototype Screens – Predict}
-    \begin{center}
-        \includegraphics[width=0.7\textwidth]{img/proto_predict.png}
-    \end{center}
-    \footnotesize
-    Predict page – author‑switch analysis with confidence scores and top contributing features.
+    (Focusing mainly on Data Processing)
 \end{frame}
 
 % ======================== EVALUATION STRATEGY ========================
@@ -283,27 +472,6 @@
     Auth & Login authentication      & UT-01--05\\
     \bottomrule
     \end{tabular}
-\end{frame}
-
-\begin{frame}{Preliminary Test Cases (Summary)}
-    \centering
-    \footnotesize
-    \begin{tabular}{p{1.5cm} p{5.0cm} p{5.0cm}}
-    \toprule
-    \textbf{Category} & \textbf{IDs (Count)} & \textbf{Key Examples}\\
-    \midrule
-    Unit Tests (23) & UT-01 – UT-23 & Authentication, document processing, feature extraction, prediction, training, evaluation\\
-    \addlinespace
-    Integration (11) & IT-01 – IT-11 & Inspect, Predict, Train, Explore, Compare endpoints via Flask test client\\
-    \addlinespace
-    System (4) & ST-01 – ST-04 & End‑to‑end: two switches, single‑author, 50‑sentence performance, train‑then‑predict\\
-    \addlinespace
-    UAT & UAT & Proxy user performs upload‑analyse‑review; usability rating\\
-    \bottomrule
-    \end{tabular}
-    \vspace{0.3cm}
-    \raggedright\tiny
-    Detailed 38‑entry test case table provided in the PDR document.
 \end{frame}
 
 \begin{frame}{Test Environment}

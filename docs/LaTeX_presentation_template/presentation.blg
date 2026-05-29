@@ -1,0 +1,4 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'presentation.blg'
+[45] biber:342> INFO - === Fri May 29, 2026, 11:28:27
+[54] Biber.pm:421> INFO - Reading 'presentation.bcf'
