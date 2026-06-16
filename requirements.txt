@@ -4,3 +4,4 @@ scikit-learn>=1.4
 nltk>=3.8
 pandas>=2.0
 matplotlib>=3.7
+pdfminer.six>=20231228

@@ -18,6 +18,7 @@ Routes
 
 import os
 import sys
+import tempfile
 import traceback
 
 # Allow "from src.xxx import ..." to work when app.py is the entry point
@@ -33,7 +34,7 @@ from src.auth.auth import (
     admin_required, get_all_users, get_current_user,
     login, login_required, logout, register,
 )
-from src.data.loader import dataset_stats, load_all, load_split
+from src.data.document_loader import DocumentLoader, dataset_stats, load_all, load_split
 from src.features.extractor import FeatureExtractor, extract
 from src.models.classifiers import MODEL_REGISTRY, ModelService, train_final_model
 from src.models.evaluation import cross_validate_model, evaluate_model
@@ -91,7 +92,7 @@ def model_is_trained() -> bool:
 
 
 def _allowed_upload(filename: str) -> bool:
-    return "." in filename and filename.rsplit(".", 1)[1].lower() in {"txt"}
+    return "." in filename and filename.rsplit(".", 1)[1].lower() in {"txt", "pdf"}
 
 
 # ── Auth routes ────────────────────────────────────────────────────────────────
@@ -367,23 +368,42 @@ def predict():
     if request.method == "POST":
         uploaded = request.files.get("file")
         if uploaded and uploaded.filename:
+            # ── Sequence: check file format, convert PDF -> text if needed ──
             if not _allowed_upload(uploaded.filename):
                 ext = uploaded.filename.rsplit(".", 1)[-1].lower() if "." in uploaded.filename else "(none)"
                 flash(
-                    f"Unsupported file type '.{ext}'. Only plain .txt files are accepted.",
+                    f"Unsupported file type '.{ext}'. Only .txt and .pdf files are accepted.",
                     "warning",
                 )
                 return render_template("predict.html", result=None, input_text="", trained=trained)
+
+            ext = uploaded.filename.rsplit(".", 1)[1].lower()
+            tmp_path = None
             try:
-                raw = uploaded.read()
-                try:
-                    input_text = raw.decode("utf-8")
-                except UnicodeDecodeError:
-                    input_text = raw.decode("latin-1")
-                    flash("File decoded with latin-1 fallback — some characters may look odd.", "warning")
+                # DocumentLoader works off a file path, so the upload is
+                # written to a temp file first, then immediately removed.
+                with tempfile.NamedTemporaryFile(suffix=f".{ext}", delete=False) as tmp:
+                    tmp.write(uploaded.read())
+                    tmp_path = tmp.name
+
+                loader = DocumentLoader()
+                doc = loader.loadFile(tmp_path)
+                if doc is None:
+                    flash("Could not read the uploaded file — it may be corrupted or empty.", "danger")
+                    return render_template("predict.html", result=None, input_text="", trained=trained)
+
+                input_text = doc.cleanedText
+                if ext == "pdf" and not input_text.strip():
+                    flash("No extractable text found in this PDF (it may be a scanned image).", "warning")
+                    return render_template("predict.html", result=None, input_text="", trained=trained)
+                if ext == "pdf":
+                    flash(f"PDF converted to text — {len(doc.sentences)} line(s) extracted.", "success")
             except Exception as exc:
                 flash(f"Could not read the uploaded file: {exc}", "danger")
                 return render_template("predict.html", result=None, input_text="", trained=trained)
+            finally:
+                if tmp_path and os.path.exists(tmp_path):
+                    os.remove(tmp_path)
         else:
             text, error = text_from_request()
             if error:

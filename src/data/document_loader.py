@@ -41,13 +41,7 @@ class Document:
     fileType: FileType = FileType.TXT
 
 
-# ── FeatureVector ─────────────────────────────────────────────────────────────
-
-@dataclass
-class FeatureVector:
-    """Thin wrapper around a numpy array + feature name list."""
-    values: list          # float[] / numpy array
-    names: List[str]
+# FeatureVector now lives in its own file: src/features/feature_vector.py
 
 
 # ── DocumentLoader ────────────────────────────────────────────────────────────

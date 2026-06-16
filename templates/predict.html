@@ -5,7 +5,7 @@
 <div class="page-header">
     <h1>Predict Author Switches</h1>
     <p class="subtitle">
-        Paste text or upload a <code>.txt</code> file.
+        Paste text or upload a <code>.txt</code> or <code>.pdf</code> file.
         The model will label each consecutive sentence pair
         as <em>same author</em> or <em>author switch</em>.
     </p>
@@ -39,11 +39,11 @@
             </div>
 
             <div class="form-group">
-                <label for="file">Or upload a .txt file</label>
+                <label for="file">Or upload a .txt / .pdf file</label>
                 <label class="file-drop" for="file">
                     <span class="file-icon">↑</span>
                     <span id="file-label">Choose file</span>
-                    <input type="file" id="file" name="file" accept=".txt"
+                    <input type="file" id="file" name="file" accept=".txt,.pdf"
                         onchange="document.getElementById('file-label').textContent = this.files[0]?.name || 'Choose file'">
                 </label>
             </div>

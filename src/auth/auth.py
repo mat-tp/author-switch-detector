@@ -32,7 +32,7 @@ from flask import flash, redirect, request, session, url_for
 
 # ── Storage path ──────────────────────────────────────────────────────────────
 
-_USERS_DIR  = os.path.join(os.path.dirname(__file__), "..", "..", "users")
+_USERS_DIR  = os.path.join(os.path.dirname(__file__), "..", "..", "dataset", "users")
 USERS_FILE  = os.path.join(_USERS_DIR, "users.json")
 
 
@@ -89,8 +89,7 @@ def register(username: str, password: str, role: str = "user"):
     """
     Create a new user account.
 
-    Returns
-    -------
+    Return : 
     (True, None)          on success
     (False, error_msg)    if validation fails or username is taken
     """
@@ -117,8 +116,7 @@ def login(username: str, password: str):
     """
     Verify credentials and write the username into the Flask session.
 
-    Returns
-    -------
+    Return :
     (True, None)          on success
     (False, error_msg)    if credentials are wrong
     """
