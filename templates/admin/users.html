@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Admin · Users · Author Switch Detector{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Registered Users</h1>
+    <p class="subtitle">{{ users|length }} account{{ 's' if users|length != 1 }} in the system.</p>
+</div>
+
+<div class="card">
+    <table class="info-table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for u in users %}
+            <tr>
+                <td><code>{{ u.username }}</code></td>
+                <td>
+                    <span class="badge {% if u.role == 'admin' %}badge-warn{% else %}badge-ok{% endif %}">
+                        {{ u.role }}
+                    </span>
+                </td>
+                <td class="muted">{{ u.created_at[:10] if u.created_at else '—' }}</td>
+            </tr>
+        {% else %}
+            <tr><td colspan="3" class="muted">No users yet.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

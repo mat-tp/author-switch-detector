@@ -1,0 +1,22 @@
+Data-Preprocessing Changes
+
+* Creating a "UMAP" model for representing a text data into 2D
+* It's part of Input processing : Therefore the use of libraries is allowed.
+
+Process : Data -> K-NN -> Fuzzy-Graph -> Optimize -> 2D Map
+
+Desired Input-Processing Pipeline 
+Raw Text
+   ↓
+Token Cache
+   ↓
+Feature Store
+   ↓
+Pairwise Store
+   ↓
+UMAP Visualization
+   ↓
+Classifier
+   ↓
+Feature Importance Analysis
+

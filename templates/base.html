@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Author Switch Detector{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
 
-    <header>
-        <nav>
-            <a href="{{ url_for('index') }}" class="nav-brand">
-                <span class="brand-icon">◈</span>
-                Author Switch Detector
-            </a>
-            <div class="nav-links">
-                <a href="{{ url_for('inspect') }}" {% if request.endpoint=='inspect' %}class="active" {% endif
-                    %}>Inspect</a>
-                <a href="{{ url_for('explore') }}" {% if request.endpoint=='explore' %}class="active" {% endif
-                    %}>Explore</a>
-                <a href="{{ url_for('train') }}" {% if request.endpoint=='train' %}class="active" {% endif %}>Train</a>
-                <a href="{{ url_for('predict') }}" {% if request.endpoint=='predict' %}class="active" {% endif
-                    %}>Predict</a>
-                <a href="{{ url_for('results') }}" {% if request.endpoint=='results' %}class="active" {% endif
-                    %}>Results</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-        <div class="flash-wrap">
-            {% for category, message in messages %}
-            <div class="alert alert-{{ category }}">{{ message }}</div>
-            {% endfor %}
+<header>
+    <nav>
+        <a href="{{ url_for('index') }}" class="nav-brand">
+            <span class="brand-icon">◈</span>
+            Author Switch Detector
+        </a>
+        <div class="nav-links">
+            {% if current_user %}
+                <a href="{{ url_for('inspect') }}"  {% if request.endpoint=='inspect'  %}class="active"{% endif %}>Inspect</a>
+                <a href="{{ url_for('explore') }}"  {% if request.endpoint=='explore'  %}class="active"{% endif %}>Explore</a>
+                <a href="{{ url_for('train') }}"    {% if request.endpoint=='train'    %}class="active"{% endif %}>Train</a>
+                <a href="{{ url_for('predict') }}"  {% if request.endpoint=='predict'  %}class="active"{% endif %}>Predict</a>
+                <a href="{{ url_for('results') }}"  {% if request.endpoint=='results'  %}class="active"{% endif %}>Results</a>
+                <a href="{{ url_for('settings') }}" {% if request.endpoint=='settings' %}class="active"{% endif %}>Settings</a>
+                {% if current_user.role == 'admin' %}
+                <a href="{{ url_for('admin_users') }}" {% if request.endpoint=='admin_users' %}class="active"{% endif %}>Admin</a>
+                {% endif %}
+                <span class="nav-divider"></span>
+                <span class="nav-user">{{ current_user.username }}</span>
+                <a href="{{ url_for('auth_logout') }}" class="btn-nav-logout">Log out</a>
+            {% else %}
+                <a href="{{ url_for('auth_login') }}"    {% if request.endpoint=='auth_login'    %}class="active"{% endif %}>Log in</a>
+                <a href="{{ url_for('auth_register') }}" {% if request.endpoint=='auth_register' %}class="active"{% endif %}>Register</a>
+            {% endif %}
         </div>
-        {% endif %}
-        {% endwith %}
+    </nav>
+</header>
 
-        {% block content %}
+<main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flash-wrap">
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
 
-        {% endblock %}
+    {% block content %}{% endblock %}
+</main>
 
-    </main>
-
-    <footer>
-        <span>Author Switch Detector - Multi-Author Writing Style Analysis</span>
-    </footer>
+<footer>
+    <span>Author Switch Detector · PAN 2026 MAWSA</span>
+    {% if current_user %}
+    <span class="footer-user">Logged in as <strong>{{ current_user.username }}</strong></span>
+    {% endif %}
+</footer>
 
 </body>
-
 </html>

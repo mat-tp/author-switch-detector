@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Settings · Author Switch Detector{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Settings</h1>
+    <p class="subtitle">Configure the dataset path and default training hyperparameters for this session.</p>
+</div>
+
+<form method="POST" action="{{ url_for('settings') }}">
+    <div class="card mt">
+        <div class="card-label">Dataset</div>
+        <div class="form-group">
+            <label for="dataset_root">Dataset root path</label>
+            <input type="text" id="dataset_root" name="dataset_root"
+                   value="{{ dataset_root }}"
+                   placeholder="dataset/mawsa26-pan-zenodo-DATA">
+            <span class="hint">
+                Should contain <code>easy/train/</code>, <code>medium/train/</code>,
+                and <code>hard/train/</code> sub-directories.
+            </span>
+        </div>
+    </div>
+
+    <div class="card mt">
+        <div class="card-label">Training Hyperparameters</div>
+        <div class="two-col">
+            <div class="form-group">
+                <label for="model_name">Default model</label>
+                <select id="model_name" name="model_name">
+                    {% for name in model_names %}
+                    <option value="{{ name }}" {% if name == hyperparams.model_name %}selected{% endif %}>
+                        {{ name }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="n_splits">Cross-validation folds (n_splits)</label>
+                <input type="number" id="n_splits" name="n_splits"
+                       min="2" max="10"
+                       value="{{ hyperparams.n_splits }}">
+                <span class="hint">Minimum 2, maximum 10.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt">
+        <button type="submit" class="btn btn-primary">Save Settings</button>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary" style="margin-left:8px;">Cancel</a>
+    </div>
+</form>
+{% endblock %}

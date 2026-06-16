@@ -686,3 +686,87 @@ footer {
     .sent-header     { flex-wrap: wrap; }
     .dist-wrap       { width: 100%; max-width: 100%; }
 }
+
+/* ── Auth pages ───────────────────────────────────────────────── */
+.auth-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 52px - 48px);
+}
+.auth-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 40px;
+    width: 100%;
+    max-width: 400px;
+}
+.auth-brand {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.auth-brand .brand-icon { color: var(--accent); }
+.auth-title {
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 24px;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 11px;
+}
+.auth-alt {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+/* ── Nav user info & logout ───────────────────────────────────── */
+.nav-divider {
+    width: 1px;
+    height: 18px;
+    background: var(--border);
+    margin: 0 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.nav-user {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
+    padding: 6px 8px;
+}
+.btn-nav-logout {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--warn);
+    padding: 6px 10px;
+    border-radius: var(--radius);
+    transition: background 0.15s;
+}
+.btn-nav-logout:hover {
+    background: rgba(255, 112, 67, 0.1);
+    text-decoration: none;
+}
+
+/* ── Footer user ──────────────────────────────────────────────── */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.footer-user { font-size: 11px; color: var(--text-dim); }
+.footer-user strong { color: var(--accent); }

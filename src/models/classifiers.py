@@ -21,7 +21,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
-from utils.save_load_model import load_pickle, load_json
+from src.utils.save_load_model import load_pickle, load_json
 
 
 # ── Classifier factories ──────────────────────────────────────────────────────

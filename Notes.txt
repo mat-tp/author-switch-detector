@@ -1,0 +1,154 @@
+I want to make modifications to my application : Most of the updates are mentioned as comments in the files, But I want to follow this Plan 
+
+----Sequence Diagram -------------
+
+User -> Upload a file  
+	 -> Check file format 
+	    if Pdf = Convert to .txt
+	    
+	 -> Make Prediction
+	 
+	 -> Show results
+	 
+----------------------------------
+
+
+---Class Diagram ----------------
+1. cLoad - Handles loading and Saving
+- filesCount = Num of files
+- sentenceCount = Number of sentence
+- extraInfo = Document Level{EASY, MEDIUM, HARD}
+
+- loadFiles() - Handles problems and the solution files
+- getStats() 
+- helper method - check for valid file (extension)
+			    - convert from pdf file to .txt file
+		
+2. cFeaturesHandle
+- featureNames : List [String]
+- numFeatures : Int
+
+- collectFeatures() : dict 
+
+
+Todos :
+1. Prototype User Interface
+Provide graphics that represents how you envision your user interface will look like. The designs should reflect your Use Cases and be realistic. Be sure to label your graphics so that one can tell what they are looking at during each point.
+a. User Authentication
+
+
+and also how can I make this sub datastrcutrure if possible without forcing :
+
+
+This readme file was generated on [2026-06-14] by [Tshephang Matlala]
+*Note:
+
+[This document provides modifications and cleanup of the dataset, creating of new data- for feature extration and also the model still uses the Original training data - This is used to facilitate the process]
+GENERAL INFORMATION
+·	Title of Dataset: EXTRACTION : PAN 2026 Dataset
+provide at least two contacts
+Author/Principal Investigator Information
+Name: Tshephang Matlala
+
+ORCID: 0009-0002-0058-6016
+
+Institution: University of Johannesburg
+
+Address: Johannesburg, South Africa
+
+Email: 223004635@student.uj.ac.za
+·	Date of data collection: This dataset was acquired from Pan at Clef March 2026
+·	Geographic location of data collection: Will check
+·	Information about funding sources that supported the collection of the data: Mostly Wikepidia
+SHARING/ACCESS INFORMATION
+·	Licenses/restrictions placed on the data: Waiting for Approval from PAN @ Clef Team
+·	Links to publications that cite or use the data: Still on Hold
+·	Links to other publicly accessible locations of the data: Not applicable
+·	Links/relationships to ancillary data sets: Highly related to Pan 2026 Authorship Dataset
+·	Was data derived from another source?
+o	If yes, list source(s): Yes
+·	Recommended citation for this dataset: will cite here
+DATA & FILE OVERVIEW
+File List: list all files (or folders, as appropriate for dataset organization) contained in the dataset, with a brief description
+·	Relationship between files, if important:
+·	Additional related data collected that was not included in the current data package:
+·	Are there multiple versions of the dataset?
+o	If yes, name of file(s) that was updated:
+o	Why was the file updated?
+o	When was the file updated?
+METHODOLOGICAL INFORMATION
+Description of methods used for collection/generation of data:
+include links or references to publications or other documentation containing experimental design or protocols used in data collection
+Methods for processing the data:
+describe how the submitted data were generated from the raw or collected data
+Instrument- or software-specific information needed to interpret the data:
+include full name and version of software, and any necessary packages or libraries needed to run scripts
+include any additional methodological information needed to interpret and/or use the data, as appropriate
+·	Standards and calibration information, if appropriate:
+·	Environmental/experimental conditions:
+·	Describe any quality-assurance procedures performed on the data:
+·	People involved with sample collection, processing, analysis and/or submission:
+DATA-SPECIFIC INFORMATION FOR: [FILENAME]
+repeat this section for each dataset, folder or file, as appropriate
+·	Number of variables:
+·	Number of cases/rows:
+·	Variable List: list variable name(s), description(s), unit(s) and value labels as appropriate for each
+·	Missing data codes: list code/symbol and definition
+·	Specialized formats or other abbreviations used:
+
+
+Other Useful information
+
+
+----Sequence Diagram -------------
+
+User -> Upload a file  
+	 -> Check file format 
+	    if Pdf = Convert to .txt
+	    
+	 -> Make Prediction
+	 
+	 -> Show results
+	 
+----------------------------------
+
+
+---Class Diagram ----------------
+1. cLoad - Handles loading and Saving
+- filesCount = Num of files
+- sentenceCount = Number of sentence
+- extraInfo = Document Level{EASY, MEDIUM, HARD}
+
+- loadFiles() - Handles problems and the solution files
+- getStats() 
+- helper method - check for valid file (extension)
+			    - convert from pdf file to .txt file
+		
+2. cFeaturesHandle
+- featureNames : List [String]
+- numFeatures : Int
+
+- collectFeatures() : dict 
+
+
+Todos :
+1. Prototype User Interface
+Provide graphics that represents how you envision your user interface will look like. The designs should reflect your Use Cases and be realistic. Be sure to label your graphics so that one can tell what they are looking at during each point.
+a. User Authentication
+
+2. Completed Class Diagram
+This should be the full version of your class diagrams using UML notation. This version of the diagram should show the full attribute and operation lists, along with parameters for operations.
+
+
+3. Interaction Sequence Diagram
+Using UML notation, illustrate how the different objects of your system will interact with each other.
+
+
+4. Database Design in 3rd Normal Form / File Structure
+This should be the full version of your class diagrams using UML notation. This version of the diagram should show the full attribute and operation lists, along with parameters for operations.
+
+5. Document's professional look and feel
+Ensure the overall professional look and feel of your document (proofread, numbered pages, table of contents).
+
+6. Prototype
+The prototype is used to support your design process. The source code must be code that YOU have written.
